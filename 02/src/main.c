@@ -37,6 +37,7 @@ int arg_parser(int argc, char *argv[], char **file_name, int *solution_part) {
     printf("Error: File does not exist.\n");
     return 2;
   }
+  fclose(file);
 
   // Check if the solution part is a valid number
   if (atoi(argv[2]) != 1 && atoi(argv[2]) != 2) {
@@ -141,6 +142,7 @@ int score_file(char **file_name) {
 
     my_score += round_score(*opponent, *me);
   }
+  fclose(file);
 
   return my_score;
 }
@@ -240,6 +242,7 @@ int score_file_part2(char **file_name, int *score) {
 
     *score += score_round_part_2(&opponent, &round_res);
   }
+  fclose(file);
 
   // return score;
   return 0;
