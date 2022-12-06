@@ -1,3 +1,9 @@
+# Output folders
+output/
+
+# Vimspector
+# .vimspector.json
+
 # Prerequisites
 *.d
 

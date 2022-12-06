@@ -1,0 +1,26 @@
+{
+  "configurations": {
+    "Launch": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/output/main",
+        //"args": [ "", "" ],
+        "cwd": "${workspaceRoot}/output",
+        //"environment": [ ... ],
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    },
+    "Attach": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "attach",
+        "program": "${workspaceRoot}/output/main",
+        "MIMode": "gdb"
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "configurations": {
+    "Launch": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/output/main",
+        "args": [ "${workspaceRoot}/tests/calories_test.dat"],
+        "cwd": "${workspaceRoot}/output",
+        //"environment": [ ... ],
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    },
+    "Attach": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "attach",
+        "program": "${workspaceRoot}/output/main",
+        "MIMode": "gdb"
+      }
+    },
+    "Launch prod": {
+      "adapter": "vscode-cpptools",
+      "filetypes": [ "cpp", "c", "objc", "rust" ], // optional
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/output/main",
+        "args": [ "calories.dat"],
+        "cwd": "${workspaceRoot}/output",
+        //"environment": [ ... ],
+        "externalConsole": true,
+        "MIMode": "gdb"
+      }
+    }
+  }
+}
